@@ -98,8 +98,9 @@ extern "C" {
 /** @defgroup PWR_LL_EC_MODE_PWR Mode Power
  * @{
  */
-#define LL_PWR_MODE_STOP_MAINREGU 0x00000000U /*!< Enter Stop mode when the CPU enters deepsleep   \
-                                               */
+#define LL_PWR_MODE_STOP_MAINREGU                                                                  \
+    0x00000000U /*!< Enter Stop mode when the CPU enters deepsleep                                 \
+                 */
 #define LL_PWR_MODE_STOP_LPREGU                                                                    \
     (PWR_CR_LPDS) /*!< Enter Stop mode (with low power Regulator ON) when the CPU enters deepsleep \
                    */

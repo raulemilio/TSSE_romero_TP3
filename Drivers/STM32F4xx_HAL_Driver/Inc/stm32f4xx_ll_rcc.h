@@ -317,20 +317,24 @@ typedef struct {
 /** @defgroup RCC_LL_EC_RTC_HSEDIV  HSE prescaler for RTC clock
  * @{
  */
-#define LL_RCC_RTC_NOCLOCK   0x00000000U                             /*!< HSE not divided */
-#define LL_RCC_RTC_HSE_DIV_2 RCC_CFGR_RTCPRE_1                       /*!< HSE clock divided by 2 */
-#define LL_RCC_RTC_HSE_DIV_3 (RCC_CFGR_RTCPRE_1 | RCC_CFGR_RTCPRE_0) /*!< HSE clock divided by 3   \
-                                                                      */
-#define LL_RCC_RTC_HSE_DIV_4 RCC_CFGR_RTCPRE_2                       /*!< HSE clock divided by 4 */
-#define LL_RCC_RTC_HSE_DIV_5 (RCC_CFGR_RTCPRE_2 | RCC_CFGR_RTCPRE_0) /*!< HSE clock divided by 5   \
-                                                                      */
-#define LL_RCC_RTC_HSE_DIV_6 (RCC_CFGR_RTCPRE_2 | RCC_CFGR_RTCPRE_1) /*!< HSE clock divided by 6   \
-                                                                      */
+#define LL_RCC_RTC_NOCLOCK   0x00000000U       /*!< HSE not divided */
+#define LL_RCC_RTC_HSE_DIV_2 RCC_CFGR_RTCPRE_1 /*!< HSE clock divided by 2 */
+#define LL_RCC_RTC_HSE_DIV_3                                                                       \
+    (RCC_CFGR_RTCPRE_1 | RCC_CFGR_RTCPRE_0)    /*!< HSE clock divided by 3                         \
+                                                */
+#define LL_RCC_RTC_HSE_DIV_4 RCC_CFGR_RTCPRE_2 /*!< HSE clock divided by 4 */
+#define LL_RCC_RTC_HSE_DIV_5                                                                       \
+    (RCC_CFGR_RTCPRE_2 | RCC_CFGR_RTCPRE_0) /*!< HSE clock divided by 5                            \
+                                             */
+#define LL_RCC_RTC_HSE_DIV_6                                                                       \
+    (RCC_CFGR_RTCPRE_2 | RCC_CFGR_RTCPRE_1) /*!< HSE clock divided by 6                            \
+                                             */
 #define LL_RCC_RTC_HSE_DIV_7                                                                       \
-    (RCC_CFGR_RTCPRE_2 | RCC_CFGR_RTCPRE_1 | RCC_CFGR_RTCPRE_0)      /*!< HSE clock divided by 7 */
-#define LL_RCC_RTC_HSE_DIV_8 RCC_CFGR_RTCPRE_3                       /*!< HSE clock divided by 8 */
-#define LL_RCC_RTC_HSE_DIV_9 (RCC_CFGR_RTCPRE_3 | RCC_CFGR_RTCPRE_0) /*!< HSE clock divided by 9   \
-                                                                      */
+    (RCC_CFGR_RTCPRE_2 | RCC_CFGR_RTCPRE_1 | RCC_CFGR_RTCPRE_0) /*!< HSE clock divided by 7 */
+#define LL_RCC_RTC_HSE_DIV_8 RCC_CFGR_RTCPRE_3                  /*!< HSE clock divided by 8 */
+#define LL_RCC_RTC_HSE_DIV_9                                                                       \
+    (RCC_CFGR_RTCPRE_3 | RCC_CFGR_RTCPRE_0) /*!< HSE clock divided by 9                            \
+                                             */
 #define LL_RCC_RTC_HSE_DIV_10                                                                      \
     (RCC_CFGR_RTCPRE_3 | RCC_CFGR_RTCPRE_1) /*!< HSE clock divided by 10 */
 #define LL_RCC_RTC_HSE_DIV_11                                                                      \
@@ -401,8 +405,9 @@ typedef struct {
 /** @defgroup RCC_LL_EC_FMPI2C1_CLKSOURCE  Peripheral FMPI2C clock source selection
  * @{
  */
-#define LL_RCC_FMPI2C1_CLKSOURCE_PCLK1 0x00000000U /*!< PCLK1 clock used as FMPI2C1 clock source   \
-                                                    */
+#define LL_RCC_FMPI2C1_CLKSOURCE_PCLK1                                                             \
+    0x00000000U /*!< PCLK1 clock used as FMPI2C1 clock source                                      \
+                 */
 #define LL_RCC_FMPI2C1_CLKSOURCE_SYSCLK                                                            \
     RCC_DCKCFGR2_FMPI2C1SEL_0 /*!< SYSCLK clock used as FMPI2C1 clock source */
 #define LL_RCC_FMPI2C1_CLKSOURCE_HSI                                                               \
@@ -556,8 +561,9 @@ typedef struct {
  */
 #define LL_RCC_CEC_CLKSOURCE_HSI_DIV488                                                            \
     0x00000000U /*!< HSI oscillator clock divided by 488 used as CEC clock */
-#define LL_RCC_CEC_CLKSOURCE_LSE RCC_DCKCFGR2_CECSEL /*!< LSE oscillator clock used as CEC clock   \
-                                                      */
+#define LL_RCC_CEC_CLKSOURCE_LSE                                                                   \
+    RCC_DCKCFGR2_CECSEL /*!< LSE oscillator clock used as CEC clock                                \
+                         */
 /**
  * @}
  */
@@ -984,9 +990,10 @@ typedef struct {
      RCC_PLLCFGR_PLLM_1) /*!< PLL, PLLI2S and PLLSAI division factor by 14 */
 #define LL_RCC_PLLM_DIV_15                                                                         \
     (RCC_PLLCFGR_PLLM_3 | RCC_PLLCFGR_PLLM_2 | RCC_PLLCFGR_PLLM_1 |                                \
-     RCC_PLLCFGR_PLLM_0)                        /*!< PLL, PLLI2S and PLLSAI division factor by 15 */
-#define LL_RCC_PLLM_DIV_16 (RCC_PLLCFGR_PLLM_4) /*!< PLL, PLLI2S and PLLSAI division factor by 16  \
-                                                 */
+     RCC_PLLCFGR_PLLM_0) /*!< PLL, PLLI2S and PLLSAI division factor by 15 */
+#define LL_RCC_PLLM_DIV_16                                                                         \
+    (RCC_PLLCFGR_PLLM_4) /*!< PLL, PLLI2S and PLLSAI division factor by 16                         \
+                          */
 #define LL_RCC_PLLM_DIV_17                                                                         \
     (RCC_PLLCFGR_PLLM_4 | RCC_PLLCFGR_PLLM_0) /*!< PLL, PLLI2S and PLLSAI division factor by 17 */
 #define LL_RCC_PLLM_DIV_18                                                                         \
@@ -1027,9 +1034,10 @@ typedef struct {
      RCC_PLLCFGR_PLLM_1) /*!< PLL, PLLI2S and PLLSAI division factor by 30 */
 #define LL_RCC_PLLM_DIV_31                                                                         \
     (RCC_PLLCFGR_PLLM_4 | RCC_PLLCFGR_PLLM_3 | RCC_PLLCFGR_PLLM_2 | RCC_PLLCFGR_PLLM_1 |           \
-     RCC_PLLCFGR_PLLM_0)                        /*!< PLL, PLLI2S and PLLSAI division factor by 31 */
-#define LL_RCC_PLLM_DIV_32 (RCC_PLLCFGR_PLLM_5) /*!< PLL, PLLI2S and PLLSAI division factor by 32  \
-                                                 */
+     RCC_PLLCFGR_PLLM_0) /*!< PLL, PLLI2S and PLLSAI division factor by 31 */
+#define LL_RCC_PLLM_DIV_32                                                                         \
+    (RCC_PLLCFGR_PLLM_5) /*!< PLL, PLLI2S and PLLSAI division factor by 32                         \
+                          */
 #define LL_RCC_PLLM_DIV_33                                                                         \
     (RCC_PLLCFGR_PLLM_5 | RCC_PLLCFGR_PLLM_0) /*!< PLL, PLLI2S and PLLSAI division factor by 33 */
 #define LL_RCC_PLLM_DIV_34                                                                         \

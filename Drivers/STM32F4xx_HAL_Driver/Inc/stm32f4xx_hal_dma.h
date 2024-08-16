@@ -272,10 +272,11 @@ typedef struct __DMA_HandleTypeDef {
  * @brief    DMA memory data size
  * @{
  */
-#define DMA_MDATAALIGN_BYTE     0x00000000U                  /*!< Memory data alignment: Byte     */
-#define DMA_MDATAALIGN_HALFWORD ((uint32_t)DMA_SxCR_MSIZE_0) /*!< Memory data alignment: HalfWord  \
-                                                              */
-#define DMA_MDATAALIGN_WORD ((uint32_t)DMA_SxCR_MSIZE_1)     /*!< Memory data alignment: Word     */
+#define DMA_MDATAALIGN_BYTE 0x00000000U /*!< Memory data alignment: Byte     */
+#define DMA_MDATAALIGN_HALFWORD                                                                    \
+    ((uint32_t)DMA_SxCR_MSIZE_0)                         /*!< Memory data alignment: HalfWord      \
+                                                          */
+#define DMA_MDATAALIGN_WORD ((uint32_t)DMA_SxCR_MSIZE_1) /*!< Memory data alignment: Word     */
 /**
  * @}
  */

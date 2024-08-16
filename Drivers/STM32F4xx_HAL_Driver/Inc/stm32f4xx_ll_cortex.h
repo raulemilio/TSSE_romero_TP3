@@ -189,9 +189,10 @@ extern "C" {
     (0x02U << MPU_RASR_AP_Pos) /*!< RW privileged - RO user (Write in a user program generates a   \
                                   fault) */
 #define LL_MPU_REGION_FULL_ACCESS                                                                  \
-    (0x03U << MPU_RASR_AP_Pos)                           /*!< RW privileged & user (Full access) */
-#define LL_MPU_REGION_PRIV_RO (0x05U << MPU_RASR_AP_Pos) /*!< RO privileged (privileged read       \
-                                                            only)*/
+    (0x03U << MPU_RASR_AP_Pos) /*!< RW privileged & user (Full access) */
+#define LL_MPU_REGION_PRIV_RO                                                                      \
+    (0x05U << MPU_RASR_AP_Pos) /*!< RO privileged (privileged read                                 \
+                                  only)*/
 #define LL_MPU_REGION_PRIV_RO_URO                                                                  \
     (0x06U << MPU_RASR_AP_Pos) /*!< RO privileged & user (read only) */
 /**

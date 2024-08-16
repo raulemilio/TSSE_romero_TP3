@@ -302,22 +302,26 @@ typedef struct {
 /** @defgroup DMA_LL_EC_CHANNEL CHANNEL
  * @{
  */
-#define LL_DMA_CHANNEL_0 0x00000000U                           /* Select Channel0 of DMA Instance */
-#define LL_DMA_CHANNEL_1 DMA_SxCR_CHSEL_0                      /* Select Channel1 of DMA Instance */
-#define LL_DMA_CHANNEL_2 DMA_SxCR_CHSEL_1                      /* Select Channel2 of DMA Instance */
-#define LL_DMA_CHANNEL_3 (DMA_SxCR_CHSEL_0 | DMA_SxCR_CHSEL_1) /* Select Channel3 of DMA Instance  \
-                                                                */
-#define LL_DMA_CHANNEL_4 DMA_SxCR_CHSEL_2                      /* Select Channel4 of DMA Instance */
-#define LL_DMA_CHANNEL_5 (DMA_SxCR_CHSEL_2 | DMA_SxCR_CHSEL_0) /* Select Channel5 of DMA Instance  \
-                                                                */
-#define LL_DMA_CHANNEL_6 (DMA_SxCR_CHSEL_2 | DMA_SxCR_CHSEL_1) /* Select Channel6 of DMA Instance  \
-                                                                */
+#define LL_DMA_CHANNEL_0 0x00000000U      /* Select Channel0 of DMA Instance */
+#define LL_DMA_CHANNEL_1 DMA_SxCR_CHSEL_0 /* Select Channel1 of DMA Instance */
+#define LL_DMA_CHANNEL_2 DMA_SxCR_CHSEL_1 /* Select Channel2 of DMA Instance */
+#define LL_DMA_CHANNEL_3                                                                           \
+    (DMA_SxCR_CHSEL_0 | DMA_SxCR_CHSEL_1) /* Select Channel3 of DMA Instance                       \
+                                           */
+#define LL_DMA_CHANNEL_4 DMA_SxCR_CHSEL_2 /* Select Channel4 of DMA Instance */
+#define LL_DMA_CHANNEL_5                                                                           \
+    (DMA_SxCR_CHSEL_2 | DMA_SxCR_CHSEL_0) /* Select Channel5 of DMA Instance                       \
+                                           */
+#define LL_DMA_CHANNEL_6                                                                           \
+    (DMA_SxCR_CHSEL_2 | DMA_SxCR_CHSEL_1) /* Select Channel6 of DMA Instance                       \
+                                           */
 #define LL_DMA_CHANNEL_7                                                                           \
     (DMA_SxCR_CHSEL_2 | DMA_SxCR_CHSEL_1 | DMA_SxCR_CHSEL_0) /* Select Channel7 of DMA Instance */
 #if defined(DMA_SxCR_CHSEL_3)
-#define LL_DMA_CHANNEL_8 DMA_SxCR_CHSEL_3                      /* Select Channel8 of DMA Instance */
-#define LL_DMA_CHANNEL_9 (DMA_SxCR_CHSEL_3 | DMA_SxCR_CHSEL_0) /* Select Channel9 of DMA Instance  \
-                                                                */
+#define LL_DMA_CHANNEL_8 DMA_SxCR_CHSEL_3 /* Select Channel8 of DMA Instance */
+#define LL_DMA_CHANNEL_9                                                                           \
+    (DMA_SxCR_CHSEL_3 | DMA_SxCR_CHSEL_0) /* Select Channel9 of DMA Instance                       \
+                                           */
 #define LL_DMA_CHANNEL_10                                                                          \
     (DMA_SxCR_CHSEL_3 | DMA_SxCR_CHSEL_1) /* Select Channel10 of DMA Instance */
 #define LL_DMA_CHANNEL_11                                                                          \
@@ -342,11 +346,13 @@ typedef struct {
 /** @defgroup DMA_LL_EC_MBURST MBURST
  * @{
  */
-#define LL_DMA_MBURST_SINGLE 0x00000000U       /*!< Memory burst single transfer configuration */
-#define LL_DMA_MBURST_INC4   DMA_SxCR_MBURST_0 /*!< Memory burst of 4 beats transfer configuration \
-                                                */
-#define LL_DMA_MBURST_INC8 DMA_SxCR_MBURST_1   /*!< Memory burst of 8 beats transfer configuration \
-                                                */
+#define LL_DMA_MBURST_SINGLE 0x00000000U /*!< Memory burst single transfer configuration */
+#define LL_DMA_MBURST_INC4                                                                         \
+    DMA_SxCR_MBURST_0 /*!< Memory burst of 4 beats transfer configuration                          \
+                       */
+#define LL_DMA_MBURST_INC8                                                                         \
+    DMA_SxCR_MBURST_1 /*!< Memory burst of 8 beats transfer configuration                          \
+                       */
 #define LL_DMA_MBURST_INC16                                                                        \
     (DMA_SxCR_MBURST_0 | DMA_SxCR_MBURST_1) /*!< Memory burst of 16 beats transfer configuration   \
                                              */
@@ -396,9 +402,10 @@ typedef struct {
  */
 #define LL_DMA_FIFOTHRESHOLD_1_4 0x00000000U     /*!< FIFO threshold 1 quart full configuration  */
 #define LL_DMA_FIFOTHRESHOLD_1_2 DMA_SxFCR_FTH_0 /*!< FIFO threshold half full configuration */
-#define LL_DMA_FIFOTHRESHOLD_3_4 DMA_SxFCR_FTH_1 /*!< FIFO threshold 3 quarts full configuration   \
-                                                  */
-#define LL_DMA_FIFOTHRESHOLD_FULL DMA_SxFCR_FTH  /*!< FIFO threshold full configuration          */
+#define LL_DMA_FIFOTHRESHOLD_3_4                                                                   \
+    DMA_SxFCR_FTH_1                             /*!< FIFO threshold 3 quarts full configuration    \
+                                                 */
+#define LL_DMA_FIFOTHRESHOLD_FULL DMA_SxFCR_FTH /*!< FIFO threshold full configuration          */
 /**
  * @}
  */

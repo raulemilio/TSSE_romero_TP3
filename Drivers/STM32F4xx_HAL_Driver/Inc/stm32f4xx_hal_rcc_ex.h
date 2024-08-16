@@ -593,7 +593,7 @@ typedef struct {
  * @}
  */
 #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx   \
-          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||                                                      \
+          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||            \
           STM32F469xx || STM32F479xx */
 
 /** @defgroup RCCEx_PLLSAI_DIVR RCC PLLSAI DIVR
@@ -968,8 +968,8 @@ typedef struct {
  * @}
  */
 #endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE   \
-          || STM32F410xx || STM32F411xE || STM32F446xx || STM32F469xx || STM32F479xx ||                        \
-          STM32F412Zx || STM32F412Vx || STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx                           \
+          || STM32F410xx || STM32F411xE || STM32F446xx || STM32F469xx || STM32F479xx ||            \
+          STM32F412Zx || STM32F412Vx || STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx   \
         */
 
 #if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx) ||                        \
@@ -1004,8 +1004,8 @@ typedef struct {
  * @}
  */
 #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx   \
-          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||                                                      \
-          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx                                                                                       \
+          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||            \
+          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx   \
           || STM32F413xx | STM32F423xx */
 
 #if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx)
@@ -6175,8 +6175,8 @@ typedef struct {
 #define __HAL_RCC_PLLI2S_DISABLE() (*(__IO uint32_t *)RCC_CR_PLLI2SON_BB = DISABLE)
 
 #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx   \
-          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||                                                      \
-          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx                                                                                       \
+          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||            \
+          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx   \
           || STM32F412Cx */
 #if defined(STM32F446xx)
 /** @brief  Macro to configure the PLLI2S clock multiplication and division factors .
@@ -7113,8 +7113,8 @@ typedef struct {
 #define __HAL_RCC_TIMCLKPRESCALER(__PRESC__) (*(__IO uint32_t *)RCC_DCKCFGR_TIMPRE_BB = (__PRESC__))
 
 #endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx) || STM32F401xC || STM32F401xE  \
-          || STM32F410xx || STM32F411xE || STM32F446xx || STM32F469xx || STM32F479xx ||                                                      \
-          STM32F412Zx  || STM32F412Vx || STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx                                                                                       \
+          || STM32F410xx || STM32F411xE || STM32F446xx || STM32F469xx || STM32F479xx ||            \
+          STM32F412Zx  || STM32F412Vx || STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx  \
         */
 
 /*----------------------------------------------------------------------------*/
@@ -7231,8 +7231,8 @@ HAL_StatusTypeDef HAL_RCCEx_DisablePLLSAI(void);
 #define RCC_PLLI2SON_BIT_NUMBER 0x1AU
 #define RCC_CR_PLLI2SON_BB      (PERIPH_BB_BASE + (RCC_CR_OFFSET * 32U) + (RCC_PLLI2SON_BIT_NUMBER * 4U))
 #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx   \
-          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||                                                      \
-          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx                                                                                       \
+          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||            \
+          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx   \
           || STM32F412Cx || STM32F413xx || STM32F423xx */
 
 /* --- DCKCFGR Register ---*/
@@ -7248,8 +7248,8 @@ HAL_StatusTypeDef HAL_RCCEx_DisablePLLSAI(void);
 #define RCC_DCKCFGR_TIMPRE_BB                                                                      \
     (PERIPH_BB_BASE + (RCC_DCKCFGR_OFFSET * 32U) + (RCC_TIMPRE_BIT_NUMBER * 4U))
 #endif /* STM32F427xx || STM32F437xx || STM32F429xx || STM32F439xx || STM32F410xx || STM32F401xC   \
-          || STM32F401xE || STM32F411xE || STM32F446xx || STM32F469xx || STM32F479xx ||                        \
-          STM32F412Zx || STM32F412Vx || STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx                           \
+          || STM32F401xE || STM32F411xE || STM32F446xx || STM32F469xx || STM32F479xx ||            \
+          STM32F412Zx || STM32F412Vx || STM32F412Rx || STM32F412Cx || STM32F413xx || STM32F423xx   \
         */
 
 /* --- CFGR Register ---*/
@@ -7265,7 +7265,7 @@ HAL_StatusTypeDef HAL_RCCEx_DisablePLLSAI(void);
 
 #define PLLI2S_TIMEOUT_VALUE  2U /* Timeout value fixed to 2 ms  */
 #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx   \
-          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||                                                      \
+          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||            \
           STM32F446xx || STM32F469xx || STM32F479xx */
 
 #if defined(STM32F412Zx) || defined(STM32F412Vx) || defined(STM32F412Rx) ||                        \
@@ -7532,8 +7532,8 @@ HAL_StatusTypeDef HAL_RCCEx_DisablePLLSAI(void);
      ((SOURCE) == RCC_MCO2SOURCE_HSE) || ((SOURCE) == RCC_MCO2SOURCE_PLLCLK))
 
 #endif /* STM32F405xx || STM32F415xx || STM32F407xx || STM32F417xx || STM32F427xx || STM32F437xx   \
-          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||                                                      \
-          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx                                                                                       \
+          || STM32F429xx || STM32F439xx || STM32F401xC || STM32F401xE || STM32F411xE ||            \
+          STM32F446xx || STM32F469xx || STM32F479xx || STM32F412Zx || STM32F412Vx || STM32F412Rx   \
         */
 
 #if defined(STM32F410Tx) || defined(STM32F410Cx) || defined(STM32F410Rx)

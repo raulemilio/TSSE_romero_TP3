@@ -95,8 +95,9 @@ typedef struct {
     0x00010002U /*!< External Interrupt Mode with Falling edge trigger detection */
 #define PWR_PVD_MODE_IT_RISING_FALLING                                                             \
     0x00010003U /*!< External Interrupt Mode with Rising/Falling edge trigger detection */
-#define PWR_PVD_MODE_EVENT_RISING 0x00020001U /*!< Event Mode with Rising edge trigger detection   \
-                                               */
+#define PWR_PVD_MODE_EVENT_RISING                                                                  \
+    0x00020001U /*!< Event Mode with Rising edge trigger detection                                 \
+                 */
 #define PWR_PVD_MODE_EVENT_FALLING                                                                 \
     0x00020002U /*!< Event Mode with Falling edge trigger detection */
 #define PWR_PVD_MODE_EVENT_RISING_FALLING                                                          \

@@ -113,11 +113,11 @@ extern "C" {
  */
 #define LL_SYSCFG_BANKMODE_BANK1                                                                   \
     (uint32_t)0x00000000 /*!< Flash Bank 1 base address mapped at 0x0800 0000 (AXI) and 0x0020     \
-                          0000 (TCM) and Flash Bank 2 base address mapped at 0x0810 0000 (AXI) and                                     \
+                          0000 (TCM) and Flash Bank 2 base address mapped at 0x0810 0000 (AXI) and \
                           0x0030 0000 (TCM)*/
 #define LL_SYSCFG_BANKMODE_BANK2                                                                   \
     SYSCFG_MEMRMP_UFB_MODE /*!< Flash Bank 2 base address mapped at 0x0800 0000 (AXI) and 0x0020   \
-                            0000(TCM) and Flash Bank 1 base address mapped at 0x0810 0000 (AXI)                                         \
+                            0000(TCM) and Flash Bank 1 base address mapped at 0x0810 0000 (AXI)    \
                             and 0x0030 0000(TCM) */
 /**
  * @}
