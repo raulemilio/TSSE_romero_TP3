@@ -1,0 +1,5 @@
+../Core/Src/FSM_termometro.c:21:6:FSM_Termometro_Init	8	static
+../Core/Src/FSM_termometro.c:30:6:FSM_Termometro_Connect	8	static
+../Core/Src/FSM_termometro.c:36:8:FSM_Termometro_Measure	16	static
+../Core/Src/FSM_termometro.c:53:6:FSM_Termometro_Range	8	static
+../Core/Src/FSM_termometro.c:62:6:FSM_Termometro_Update	8	static

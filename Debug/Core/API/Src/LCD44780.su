@@ -1,0 +1,12 @@
+../Core/API/Src/LCD44780.c:25:13:LCD44780_TransmitReceive	24	static
+../Core/API/Src/LCD44780.c:34:13:LCD44780_SendCmd	24	static
+../Core/API/Src/LCD44780.c:41:13:LCD44780_SendData	24	static
+../Core/API/Src/LCD44780.c:48:13:LCD44780_WriteString	16	static
+../Core/API/Src/LCD44780.c:54:13:LCD44780_SetCursor	24	static
+../Core/API/Src/LCD44780.c:70:13:LCD44780_Clear	8	static
+../Core/API/Src/LCD44780.c:74:13:LCD44780_Backlight	16	static
+../Core/API/Src/LCD44780.c:85:6:LCD44780_Init	16	static
+../Core/API/Src/LCD44780.c:99:6:LCD44780_UpdateTemperature	40	static
+../Core/API/Src/LCD44780.c:117:6:LCD44780_TemperatureAlarm	16	static
+../Core/API/Src/LCD44780.c:124:6:LCD44780_SensorTemperatureError	16	static
+../Core/API/Src/LCD44780.c:132:6:LCD44780_SensorConnectError	16	static

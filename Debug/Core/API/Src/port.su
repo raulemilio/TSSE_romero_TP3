@@ -1,0 +1,14 @@
+../Core/API/Src/port.c:31:6:setSPI_Port_Name	8	static
+../Core/API/Src/port.c:35:6:setI2C_Port_Name	8	static
+../Core/API/Src/port.c:39:6:setUART_Port_Name	8	static
+../Core/API/Src/port.c:48:6:MX_GPIO_Init	40	static
+../Core/API/Src/port.c:68:6:MX_SPI_Init	8	static
+../Core/API/Src/port.c:87:6:BMP280_SPI_TransmitReceive	24	static
+../Core/API/Src/port.c:100:6:MX_I2C_Init	8	static
+../Core/API/Src/port.c:131:6:LCDHD44780_I2C_PCF8574T_TransmitReceive	24	static
+../Core/API/Src/port.c:146:6:MX_USART_UART_Init	8	static
+../Core/API/Src/port.c:161:6:UART_Send_Temperature	16	static
+../Core/API/Src/port.c:165:6:UART_TemperatureAlarm	8	static
+../Core/API/Src/port.c:169:6:UART_SensorTemperatureError	8	static
+../Core/API/Src/port.c:173:6:UART_SensorConnectError	8	static
+../Core/API/Src/port.c:178:1:__io_putchar	16	static

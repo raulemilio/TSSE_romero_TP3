@@ -1,0 +1,7 @@
+../Core/API/Src/BM280.c:33:16:BMP280_Read8	24	static
+../Core/API/Src/BM280.c:42:17:BMP280_Read16	24	static
+../Core/API/Src/BM280.c:51:17:BMP280_Read16LE	24	static
+../Core/API/Src/BM280.c:58:13:BMP280_Write8	24	static
+../Core/API/Src/BM280.c:67:17:BMP280_Read24	24	static
+../Core/API/Src/BM280.c:77:9:BMP280_Init	24	static
+../Core/API/Src/BM280.c:113:7:BMP280_ReadTemperature	32	static
