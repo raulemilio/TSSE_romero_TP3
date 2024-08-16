@@ -35,6 +35,8 @@
     - -:test/support
   :source:
     - src/**
+    - Core/API/Src/**
+    - Core/Src/**
   :support:
     - test/support
   :libraries: []

@@ -3,27 +3,27 @@
 # Toolchain: GNU Tools for STM32 (10.3-2021.10)
 ################################################################################
 
-# Add inputs and outputs from these tool invocations to the build variables 
+# Add inputs and outputs from these tool invocations to the build variables
 C_SRCS += \
 ../Core/API/Src/API_delay.c \
 ../Core/API/Src/BM280.c \
 ../Core/API/Src/FSM_termometro.c \
 ../Core/API/Src/LCD44780.c \
-../Core/API/Src/port.c 
+../Core/API/Src/port.c
 
 OBJS += \
 ./Core/API/Src/API_delay.o \
 ./Core/API/Src/BM280.o \
 ./Core/API/Src/FSM_termometro.o \
 ./Core/API/Src/LCD44780.o \
-./Core/API/Src/port.o 
+./Core/API/Src/port.o
 
 C_DEPS += \
 ./Core/API/Src/API_delay.d \
 ./Core/API/Src/BM280.d \
 ./Core/API/Src/FSM_termometro.d \
 ./Core/API/Src/LCD44780.d \
-./Core/API/Src/port.d 
+./Core/API/Src/port.d
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -36,4 +36,3 @@ clean-Core-2f-API-2f-Src:
 	-$(RM) ./Core/API/Src/API_delay.cyclo ./Core/API/Src/API_delay.d ./Core/API/Src/API_delay.o ./Core/API/Src/API_delay.su ./Core/API/Src/BM280.cyclo ./Core/API/Src/BM280.d ./Core/API/Src/BM280.o ./Core/API/Src/BM280.su ./Core/API/Src/FSM_termometro.cyclo ./Core/API/Src/FSM_termometro.d ./Core/API/Src/FSM_termometro.o ./Core/API/Src/FSM_termometro.su ./Core/API/Src/LCD44780.cyclo ./Core/API/Src/LCD44780.d ./Core/API/Src/LCD44780.o ./Core/API/Src/LCD44780.su ./Core/API/Src/port.cyclo ./Core/API/Src/port.d ./Core/API/Src/port.o ./Core/API/Src/port.su
 
 .PHONY: clean-Core-2f-API-2f-Src
-

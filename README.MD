@@ -1,9 +1,8 @@
-# Trabajo Final Integrador
-
+# Trabajo práctico °3
+Testing de software para Sistemas Embebidos
 Estudiante. Raúl Emilio Romero
-Cohorte 20 
-Carrera: CESE
-
+Cohorte 21
+Carrera de especialización en Sistemas Embebidos
 # Aplicación
 
 Termómetro con Alarma y visualización por pantalla LCD y UART

@@ -3830,11 +3830,11 @@ void SystemInit(void)
     .section  .text.Reset_Handler
   .weak  Reset_Handler
   .type  Reset_Handler, %function
-Reset_Handler: 
+Reset_Handler:
   ldr   sp, =_estack       /* set stack pointer */
  8001dcc:	f8df d034 	ldr.w	sp, [pc, #52]	; 8001e04 <LoopFillZerobss+0x12>
- 
-/* Copy the data segment initializers from flash to SRAM */  
+
+/* Copy the data segment initializers from flash to SRAM */
   ldr r0, =_sdata
  8001dd0:	480d      	ldr	r0, [pc, #52]	; (8001e08 <LoopFillZerobss+0x16>)
   ldr r1, =_edata
@@ -3865,7 +3865,7 @@ LoopCopyDataInit:
  8001de2:	428c      	cmp	r4, r1
   bcc CopyDataInit
  8001de4:	d3f9      	bcc.n	8001dda <CopyDataInit>
-  
+
 /* Zero fill the bss segment. */
   ldr r2, =_sbss
  8001de6:	4a0b      	ldr	r2, [pc, #44]	; (8001e14 <LoopFillZerobss+0x22>)
@@ -3893,7 +3893,7 @@ LoopFillZerobss:
  8001df4:	d3fb      	bcc.n	8001dee <FillZerobss>
 
 /* Call the clock system initialization function.*/
-  bl  SystemInit   
+  bl  SystemInit
  8001df6:	f7ff ffd7 	bl	8001da8 <SystemInit>
 /* Call static constructors */
     bl __libc_init_array
@@ -3901,7 +3901,7 @@ LoopFillZerobss:
 /* Call the application's entry point.*/
   bl  main
  8001dfe:	f7ff fcb9 	bl	8001774 <main>
-  bx  lr    
+  bx  lr
  8001e02:	4770      	bx	lr
   ldr   sp, =_estack       /* set stack pointer */
  8001e04:	20030000 	.word	0x20030000
@@ -3917,7 +3917,7 @@ LoopFillZerobss:
  8001e18:	20000318 	.word	0x20000318
 
 08001e1c <ADC_IRQHandler>:
- * @retval None       
+ * @retval None
 */
     .section  .text.Default_Handler,"ax",%progbits
 Default_Handler:
@@ -3935,7 +3935,7 @@ HAL_StatusTypeDef HAL_Init(void)
 {
  8001e20:	b580      	push	{r7, lr}
  8001e22:	af00      	add	r7, sp, #0
-  /* Configure Flash prefetch, Instruction cache, Data cache */ 
+  /* Configure Flash prefetch, Instruction cache, Data cache */
 #if (INSTRUCTION_CACHE_ENABLE != 0U)
   __HAL_FLASH_INSTRUCTION_CACHE_ENABLE();
  8001e24:	4b0e      	ldr	r3, [pc, #56]	; (8001e60 <HAL_Init+0x40>)
@@ -4053,7 +4053,7 @@ __weak HAL_StatusTypeDef HAL_InitTick(uint32_t TickPriority)
  8001ec0:	20000008 	.word	0x20000008
 
 08001ec4 <HAL_IncTick>:
- * @note This function is declared as __weak to be overwritten in case of other 
+ * @note This function is declared as __weak to be overwritten in case of other
   *      implementations in user file.
   * @retval None
   */
@@ -4080,7 +4080,7 @@ __weak void HAL_IncTick(void)
  8001ee8:	20000304 	.word	0x20000304
 
 08001eec <HAL_GetTick>:
-  * @note This function is declared as __weak to be overwritten in case of other 
+  * @note This function is declared as __weak to be overwritten in case of other
   *       implementations in user file.
   * @retval tick value
   */
@@ -4395,8 +4395,8 @@ __STATIC_INLINE uint32_t SysTick_Config(uint32_t ticks)
  80020ac:	e000e010 	.word	0xe000e010
 
 080020b0 <HAL_NVIC_SetPriorityGrouping>:
-  * @note   When the NVIC_PriorityGroup_0 is selected, IRQ preemption is no more possible. 
-  *         The pending IRQ priority will be managed only by the subpriority. 
+  * @note   When the NVIC_PriorityGroup_0 is selected, IRQ preemption is no more possible.
+  *         The pending IRQ priority will be managed only by the subpriority.
   * @retval None
   */
 void HAL_NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
@@ -4407,7 +4407,7 @@ void HAL_NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
  80020b6:	6078      	str	r0, [r7, #4]
   /* Check the parameters */
   assert_param(IS_NVIC_PRIORITY_GROUP(PriorityGroup));
-  
+
   /* Set the PRIGROUP[10:8] bits according to the PriorityGroup parameter value */
   NVIC_SetPriorityGrouping(PriorityGroup);
  80020b8:	6878      	ldr	r0, [r7, #4]
@@ -4420,11 +4420,11 @@ void HAL_NVIC_SetPriorityGrouping(uint32_t PriorityGroup)
 
 080020c6 <HAL_NVIC_SetPriority>:
   *         This parameter can be a value between 0 and 15
-  *         A lower priority value indicates a higher priority.          
+  *         A lower priority value indicates a higher priority.
   * @retval None
   */
 void HAL_NVIC_SetPriority(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t SubPriority)
-{ 
+{
  80020c6:	b580      	push	{r7, lr}
  80020c8:	b086      	sub	sp, #24
  80020ca:	af00      	add	r7, sp, #0
@@ -4435,15 +4435,15 @@ void HAL_NVIC_SetPriority(IRQn_Type IRQn, uint32_t PreemptPriority, uint32_t Sub
   uint32_t prioritygroup = 0x00U;
  80020d4:	2300      	movs	r3, #0
  80020d6:	617b      	str	r3, [r7, #20]
-  
+
   /* Check the parameters */
   assert_param(IS_NVIC_SUB_PRIORITY(SubPriority));
   assert_param(IS_NVIC_PREEMPTION_PRIORITY(PreemptPriority));
-  
+
   prioritygroup = NVIC_GetPriorityGrouping();
  80020d8:	f7ff ff5c 	bl	8001f94 <__NVIC_GetPriorityGrouping>
  80020dc:	6178      	str	r0, [r7, #20]
-  
+
   NVIC_SetPriority(IRQn, NVIC_EncodePriority(prioritygroup, PreemptPriority, SubPriority));
  80020de:	687a      	ldr	r2, [r7, #4]
  80020e0:	68b9      	ldr	r1, [r7, #8]
@@ -4553,7 +4553,7 @@ void HAL_GPIO_Init(GPIO_TypeDef  *GPIOx, GPIO_InitTypeDef *GPIO_Init)
         /* Check the Speed parameter */
         assert_param(IS_GPIO_SPEED(GPIO_Init->Speed));
         /* Configure the IO Speed */
-        temp = GPIOx->OSPEEDR; 
+        temp = GPIOx->OSPEEDR;
  800216a:	687b      	ldr	r3, [r7, #4]
  800216c:	689b      	ldr	r3, [r3, #8]
  800216e:	61bb      	str	r3, [r7, #24]
@@ -4618,7 +4618,7 @@ void HAL_GPIO_Init(GPIO_TypeDef  *GPIOx, GPIO_InitTypeDef *GPIO_Init)
       {
         /* Check the parameters */
         assert_param(IS_GPIO_PULL(GPIO_Init->Pull));
-        
+
         /* Activate the Pull-up or Pull down resistor for the current IO */
         temp = GPIOx->PUPDR;
  80021d8:	687b      	ldr	r3, [r7, #4]
