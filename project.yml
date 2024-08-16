@@ -33,12 +33,15 @@
   :test:
     - +:test/**
     - -:test/support
+  :mock:
+      - test/mocks
   :source:
     - src/**
-    - Core/API/Src/**
-    - Core/Src/**
+    - Core/**
+    - Drivers/**
   :support:
     - test/support
+    - test/mocks
   :libraries: []
 
 :defines:
