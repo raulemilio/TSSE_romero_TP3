@@ -1,4 +1,4 @@
-# Trabajo práctico °3
+# Trabajo práctico N°3
 Testing de software para Sistemas Embebidos
 Estudiante. Raúl Emilio Romero
 Cohorte 21
