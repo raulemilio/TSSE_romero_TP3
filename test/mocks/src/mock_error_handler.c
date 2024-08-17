@@ -19,18 +19,8 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 SPDX-License-Identifier: MIT
 *************************************************************************************************/
 
-/*
-Con todos los leds apagados prender el led 3 y verificar que efectivamente el bit 2 se pone en 1 y
-el resto de bit permanece en 0. Apagar un led prendido y ver que efectivamente se apaga y que el
-resto no cambia. Con todos los leds apagados prender un led y verificar que al consultar el estado
-del mismo me informa que esta prendido. Prender todos los leds que estan apagados antes de la
-operación Apagar todos los leds que ya estan prendidos Prender leds que ya esten prendidos de antes
-Apagar leds que ya esten apagados
-Comprobar valores prohibidos
-Comprobar los valores de limite
-*/
+#include "mock_error_handler.h"
 
-#include "unity.h"
-#include "stm32f4xx_hal.h"
-//#include "mock_delay.h"
-//#include "mock_i2c.h"
+void Error_Handler(void) {
+    UNITY_TEST_ASSERT_FALSE(1, __LINE__, "Unexpected call to Error_Handler");
+}

@@ -18,46 +18,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 SPDX-License-Identifier: MIT
 *************************************************************************************************/
-#include <stdint.h>
 
-/**
- * @brief Función para iniciar el array de led apagados
- *
- * @param puerto Puerto del array de leds
- */
-void leds_init(uint16_t * puerto);
+#ifndef ERROR_HANDLER_H
+#define ERROR_HANDLER_H
 
-/**
- * @brief Función para encender un led en particular
- *
- * @param puerto dirección del led particular
- */
-void led_turn_on(int led); // código optimo int y no uint16_t
+void Error_Handler(void);
 
-/**
- * @brief Función para apagar un led en particular
- *
- * @param puerto dirección del led particular
- */
-void led_turn_off(int led);
-
-/**
- * @brief Función para encender todos los leds
- *
- * @param puerto puerto del array de leds
- */
-void led_turn_all_on(uint16_t * puerto);
-
-/**
- * @brief Función para apagar todos los leds
- *
- * @param puerto puerto del array de leds
- */
-void led_turn_all_off(uint16_t * puerto);
-
-/**
- * @brief Función para ver el estado de un led
- *
- * @param puerto puerto del array de leds
- */
-int led_get_state(int led);
+#endif // ERROR_HANDLER_H

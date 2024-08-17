@@ -37,8 +37,10 @@
       - test/mocks
   :source:
     - src/**
+    - inc/**
     - Core/**
     - Drivers/**
+    - test/mocks/**
   :support:
     - test/support
     - test/mocks
@@ -52,6 +54,8 @@
   :test:
     - *common_defines
     - TEST
+    - STM32F429xx # familia STM32F429
+    - STM32F429ZI # Modelo específico
   :test_preprocess:
     - *common_defines
     - TEST
@@ -106,5 +110,3 @@
     - module_generator
     - gcov
     - junit_tests_report
-
-...

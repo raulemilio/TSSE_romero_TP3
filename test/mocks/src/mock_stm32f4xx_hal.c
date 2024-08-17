@@ -19,30 +19,9 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 SPDX-License-Identifier: MIT
 *************************************************************************************************/
 
-/*
- * FSM_termometro.h
- *
- *  Created on: 14 ago. 2023
- *      Author: rome
- */
-#ifndef SRC_FSM_TERMOMETRO_H_
-#define SRC_FSM_TERMOMETRO_H_
+#include "mock_stm32f4xx_hal.h"
 
-#include "main.h"
-#include "termometroConfig.h"
-
-#include "BMP280.h"
-#include "LCD44780.h"
-#include "port.h"
-
-#include <stdio.h>
-#include <string.h>
-
-/**************************************
- * Funciones de la máquina de estados principal de la API
- *
- **************************************/
-// Funciones Públicas
-void FSM_Termometro_Update(void);
-
-#endif /* SRC_FSM_TERMOMETRO_H_ */
+uint32_t HAL_GetTick(void) {
+    UNITY_TEST_ASSERT_FALSE(1, __LINE__, "Unexpected call to HAL_GetTick");
+    return 0; // Valor por defecto
+}
