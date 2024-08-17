@@ -8,9 +8,9 @@
 uint32_t HAL_GetTick(void);
 
 // Macros para manejar expectativas y verificaciones en las pruebas
-#define HAL_GetTick_ExpectAndReturn(value) \
-    do { \
-        HAL_GetTick_CMockExpectAndReturn(__LINE__, value); \
+#define HAL_GetTick_ExpectAndReturn(value)                                                         \
+    do {                                                                                           \
+        HAL_GetTick_CMockExpectAndReturn(__LINE__, value);                                         \
     } while (0)
 
 // Prototipos para las funciones mock generadas automáticamente por CMock
