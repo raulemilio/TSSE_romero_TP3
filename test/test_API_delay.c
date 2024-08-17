@@ -126,8 +126,8 @@ void test_delayWrite_Should_CallErrorHandler_When_NonPositiveDuration(void) {
 }
 
 /**
- * @brief Función que prueba que se agregó para mejorar la cobertura.
- * Se prueba el comportamiento en la entrada del primer if
+ * @brief Función que se agregó para mejorar la cobertura.
+ * Se prueba el comportamiento de la función en la entrada del primer if
  */
 void test_delayRead_should_set_startTime_and_running_when_not_running(void) {
     // Configura el valor esperado de HAL_GetTick con cualquier valor
