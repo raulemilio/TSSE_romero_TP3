@@ -124,3 +124,24 @@ void test_delayWrite_Should_CallErrorHandler_When_NonPositiveDuration(void) {
     Error_Handler_Expect();
     delayWrite(&delay, duration);
 }
+
+/**
+ * @brief Función que prueba que se agregó para mejorar la cobertura.
+ * Se prueba el comportamiento en la entrada del primer if
+ */
+void test_delayRead_should_set_startTime_and_running_when_not_running(void) {
+    // Configura el valor esperado de HAL_GetTick con cualquier valor
+    uint32_t mock_tick_value = 1234;
+    HAL_GetTick_ExpectAndReturn(mock_tick_value); // valor que se cargará desde HAL_GetTick()
+    
+    // Configura el estado inicial del retraso para entrar en el primer if
+    test_delay.running = false;
+    
+    // Llama a delayRead
+    bool_t result = delayRead(&test_delay);
+
+    // Verifica el resultado
+    TEST_ASSERT_FALSE(result); // Debe retornar false porque el retraso no ha terminado
+    TEST_ASSERT_TRUE(test_delay.running); // El retraso debería estar en ejecución
+    TEST_ASSERT_EQUAL_UINT32(mock_tick_value, test_delay.startTime); // El tiempo de inicio debe ser el valor simulado
+}

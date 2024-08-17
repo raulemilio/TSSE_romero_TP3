@@ -35,8 +35,6 @@ void delayInit(delay_t * delay, tick_t duration) {
 bool_t delayRead(delay_t * delay) {
     bool_t ret = false;
 
-    // if(delay==NULL)
-    //   Error_Handler();
 
     if (delay->running == false) {
         delay->startTime = HAL_GetTick();
@@ -53,3 +51,4 @@ void delayWrite(delay_t * delay, tick_t duration) {
         Error_Handler();
     delay->duration = duration;
 }
+
